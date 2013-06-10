@@ -220,6 +220,8 @@
 
       <li><a href="#com_ae63889d5e5f406babdda11f1b0123978eb4603f">ae63889</a></li>
 
+      <li><a href="#com_1970e6f5596a96358cbcba2202bc1fa69211a389">1970e6f</a></li>
+
       <li><a href="#com_d5b786168d913e831aedb847c3eae42b87d49f1d">d5b7861</a></li>
 
       <li><a href="#com_7bce1473ce90f4e60f49d72bf1b61d32f430cb54">7bce147</a></li>
@@ -230,9 +232,13 @@
 
       <li><a href="#com_6feb49d47e68077713b316da11a6533e1d639add">6feb49d</a></li>
 
+      <li><a href="#com_67961abf844c1076bc877583cf42b9720d89eeed">67961ab</a></li>
+
       <li><a href="#com_06e7da447e109c9d4b50fdcb1d7c2e1b55850375">06e7da4</a></li>
 
       <li><a href="#com_95763bdcd5e83fb4b924ac8f71b00c67b2661dc7">95763bd</a></li>
+
+      <li><a href="#com_7a446d89ebb85821e59f8370cf12fdfda11fc300">7a446d8</a></li>
 
       <li><a href="#com_e706d40e67287f56741ecf730ef44a7e3ac66054">e706d40</a></li>
 
@@ -246,7 +252,7 @@
 
       <li><a href="#com_83521b165c2d34b0f5904766b5cf9d6f9cf3660a">83521b1</a></li>
 
-      <li><a href="#com_1970e6f5596a96358cbcba2202bc1fa69211a389">1970e6f</a></li>
+      <li><a href="#com_5ebcc42a6693401b956821b9bcae4a94afa3f869">5ebcc42</a></li>
 
       <li><a href="#com_dfb272c5b97441b4e2bc1177c97177ecf83b1d0f">dfb272c</a></li>
 
@@ -417,6 +423,13 @@
 </div>
 <hr />
 
+<ul><li><a href="https://github.com/mdipierro/web2py-book/commit/1970e6f5596a96358cbcba2202bc1fa69211a389">1970e6f</a><ul><li>Date : 2013-04-21</li><li>updates</li></ul></li></ul>
+<div class="row-fluid" id="com_1970e6f5596a96358cbcba2202bc1fa69211a389">
+    <div class="span6"><div class="diff"><div class="insert">+The selection criteria in the exmaple above is a single field. </div><div class="insert">+It can also be a query, such as </div><div class="insert">+``</div><div class="insert">+db.person.update_or_insert((db.person.name==&#x27;John&#x27;) &amp; (db.person.birthplace==&#x27;Chicago&#x27;)),</div><div class="insert">+     name=&#x27;John&#x27;,birthplace=&#x27;Chicago&#x27;,pet=&#x27;Rover&#x27;)</div><div class="insert">+``:code</div><div class="insert">+</div><div class=""> #### ``validate_and_insert``, ``validate_and_update``</div></div></div>
+    <div class="span6"><div class="diff"><div class=""> #### ``validate_and_insert``, ``validate_and_update``</div></div></div>
+</div>
+<hr />
+
 <ul><li><a href="https://github.com/mdipierro/web2py-book/commit/d5b786168d913e831aedb847c3eae42b87d49f1d">d5b7861</a><ul><li>Date : 2013-03-16</li><li>explains better how to switch adapters at runtime, thanks Niphlod</li></ul></li></ul>
 <div class="row-fluid" id="com_d5b786168d913e831aedb847c3eae42b87d49f1d">
     <div class="span6"><div class="diff"><div class=""> ``</div><div class="insert">+import MySQLdb as mysqldb</div><div class=""> from gluon.dal import MySQLAdapter</div><div class=""> MySQLAdapter.driver = mysqldb</div><div class=""> ``</div><div class="insert">+i.e. ``mysqldb`` has to be &#x27;&#x27;that module&#x27;&#x27; with a .connect() method.</div><div class="insert">+You can specify optional driver arguments and adapter arguments:</div></div></div>
@@ -452,6 +465,13 @@
 </div>
 <hr />
 
+<ul><li><a href="https://github.com/mdipierro/web2py-book/commit/67961abf844c1076bc877583cf42b9720d89eeed">67961ab</a><ul><li>Date : 2013-06-04</li><li>Updated virtual fields to for changes of June 4</li></ul></li></ul>
+<div class="row-fluid" id="com_67961abf844c1076bc877583cf42b9720d89eeed">
+    <div class="span6"><div class="diff"><div class=""> ------</div><div class="insert">Mind that virtual fields do not have the same attributes as the other fields (default, readable, requires, etc)<span class="highlight">.  In older versions of web2py</span> they do not appear in the list of ``db.table.fields`` and <span class="highlight">the</span>y <span class="highlight">require a special approach to display in </span>SQLFORM.grid<span class="highlight"> and</span> SQLFORM.smartgrid<span class="highlight">. See the discussion on grids and virtual fields in the</span> For<span class="highlight"></span>ms chapter.</div><div class=""> ------</div></div></div>
+    <div class="span6"><div class="diff"><div class=""> ------</div><div class="delete">Mind that virtual fields do not have the same attributes as the other fields (default, readable, requires, etc)<span class="highlight"> and</span> they do not appear in the list of ``db.table.fields`` and <span class="highlight">are not visualized b</span>y <span class="highlight">default in tables (TABLE) and grids (</span>SQLFORM.grid<span class="highlight">,</span> SQLFORM.smartgrid<span class="highlight">).</span> For<span class="highlight"> the grids, see the discussion on virtual fields in the For</span>ms chapter.</div><div class=""> ------</div></div></div>
+</div>
+<hr />
+
 <ul><li><a href="https://github.com/mdipierro/web2py-book/commit/06e7da447e109c9d4b50fdcb1d7c2e1b55850375">06e7da4</a><ul><li>Date : 2013-01-16</li><li>added db_codec parameter description</li></ul></li></ul>
 <div class="row-fluid" id="com_06e7da447e109c9d4b50fdcb1d7c2e1b55850375">
     <div class="span6"><div class="diff"><div class="insert">+Notice that by default web2py uses utf8 character encoding for databases. If you work with existing databases that behave differently, you have to change it with the optional parameter ``db_codec`` like</div><div class="insert">+</div><div class="insert">+``</div><div class="insert">+db = DAL(&#x27;...&#x27;, db_codec=&#x27;latin1&#x27;)</div><div class="insert">+``:code</div><div class="insert">+</div><div class="insert">+otherwise you&#x27;ll get UnicodeDecodeErrors tickets.</div><div class="insert">+</div><div class=""> #### Connection pooling</div><div class=""> ``connection pooling``:inxx</div></div></div>
@@ -463,6 +483,13 @@
 <div class="row-fluid" id="com_95763bdcd5e83fb4b924ac8f71b00c67b2661dc7">
     <div class="span6"><div class="diff"><div class="insert">+</div><div class=""> ### Record representation</div></div></div>
     <div class="span6"><div class="diff"><div class=""> ### Record representation</div></div></div>
+</div>
+<hr />
+
+<ul><li><a href="https://github.com/mdipierro/web2py-book/commit/7a446d89ebb85821e59f8370cf12fdfda11fc300">7a446d8</a><ul><li>Date : 2013-06-04</li><li>fixed typo and unbalanced parantheses in ch 06 example about update_or_insert with criteria</li></ul></li></ul>
+<div class="row-fluid" id="com_7a446d89ebb85821e59f8370cf12fdfda11fc300">
+    <div class="span6"><div class="diff"><div class="insert">The selection criteria in the ex<span class="highlight">a</span>m<span class="highlight"></span>ple above is a single field. </div><div class=""> It can also be a query, such as </div><div class=""> ``</div><div class="insert">db.person.update_or_insert((db.person.name==&#x27;John&#x27;) &amp; (db.person.birthplace==&#x27;Chicago&#x27;)<span class="highlight"></span>,</div><div class="">      name=&#x27;John&#x27;,birthplace=&#x27;Chicago&#x27;,pet=&#x27;Rover&#x27;)</div><div class=""> ``:code</div></div></div>
+    <div class="span6"><div class="diff"><div class="delete">The selection criteria in the ex<span class="highlight"></span>m<span class="highlight">a</span>ple above is a single field. </div><div class=""> It can also be a query, such as </div><div class=""> ``</div><div class="delete">db.person.update_or_insert((db.person.name==&#x27;John&#x27;) &amp; (db.person.birthplace==&#x27;Chicago&#x27;)<span class="highlight">)</span>,</div><div class="">      name=&#x27;John&#x27;,birthplace=&#x27;Chicago&#x27;,pet=&#x27;Rover&#x27;)</div><div class=""> ``:code</div></div></div>
 </div>
 <hr />
 
@@ -508,10 +535,10 @@
 </div>
 <hr />
 
-<ul><li><a href="https://github.com/mdipierro/web2py-book/commit/1970e6f5596a96358cbcba2202bc1fa69211a389">1970e6f</a><ul><li>Date : 2013-04-21</li><li>updates</li></ul></li></ul>
-<div class="row-fluid" id="com_1970e6f5596a96358cbcba2202bc1fa69211a389">
-    <div class="span6"><div class="diff"><div class="insert">+The selection criteria in the exmaple above is a single field. </div><div class="insert">+It can also be a query, such as </div><div class="insert">+``</div><div class="insert">+db.person.update_or_insert((db.person.name==&#x27;John&#x27;) &amp; (db.person.birthplace==&#x27;Chicago&#x27;)),</div><div class="insert">+     name=&#x27;John&#x27;,birthplace=&#x27;Chicago&#x27;,pet=&#x27;Rover&#x27;)</div><div class="insert">+``:code</div><div class="insert">+</div><div class=""> #### ``validate_and_insert``, ``validate_and_update``</div></div></div>
-    <div class="span6"><div class="diff"><div class=""> #### ``validate_and_insert``, ``validate_and_update``</div></div></div>
+<ul><li><a href="https://github.com/mdipierro/web2py-book/commit/5ebcc42a6693401b956821b9bcae4a94afa3f869">5ebcc42</a><ul><li>Date : 2013-06-04</li><li>Explain the use of links to display virtual fields in grids</li></ul></li></ul>
+<div class="row-fluid" id="com_5ebcc42a6693401b956821b9bcae4a94afa3f869">
+    <div class="span6"><div class="diff"><div class=""> ------</div><div class="insert">Mind that virtual fields do not have the same attributes as the other fields (default, readable, requires, etc) and they do not appear in the list of ``db.table.fields`` and are not visualized by default in tables (TABLE) and grids (SQLFORM.grid, SQLFORM.smartgrid).<span class="highlight"> For the grids, see the discussion on virtual fields in the Forms chapter.</span></div><div class=""> ------</div></div></div>
+    <div class="span6"><div class="diff"><div class=""> ------</div><div class="delete">Mind that virtual fields do not have the same attributes as the other fields (default, readable, requires, etc) and they do not appear in the list of ``db.table.fields`` and are not visualized by default in tables (TABLE) and grids (SQLFORM.grid, SQLFORM.smartgrid).<span class="highlight"></span></div><div class=""> ------</div></div></div>
 </div>
 <hr />
 
