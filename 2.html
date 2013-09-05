@@ -176,14 +176,23 @@
 <div class="pagination">
   <ul>
 
+      
       <li><a href="#com_097d699dc16179206ccb7e4aee863d6523cd471c">097d699</a></li>
+      
 
-      <li><a href="#com_e774cecf95a21db8eb69c1bd6c65dd532e8db300">e774cec</a></li>
-
+      
       <li><a href="#com_49f38ab7ef56de1eb4ef48f68427ebf8a46b505d">49f38ab</a></li>
+      
+
+      
+      <li><a href="#com_e774cecf95a21db8eb69c1bd6c65dd532e8db300">e774cec</a></li>
+      
+
+      
 
   </ul>
 </div>
+
 
 
 
@@ -194,12 +203,7 @@
 </div>
 <hr />
 
-<ul><li><a href="https://github.com/mdipierro/web2py-book/commit/e774cecf95a21db8eb69c1bd6c65dd532e8db300">e774cec</a><ul><li>Date : 2012-09-27</li><li>typo in chapter 2</li></ul></li></ul>
-<div class="row-fluid" id="com_e774cecf95a21db8eb69c1bd6c65dd532e8db300">
-    <div class="span6"><div class="diff"><div class=""> Here is a more complex class:</div><div class=""> ``</div><div class=""> &gt;&gt;&gt; class MyClass(object):</div><div class=""> &gt;&gt;&gt;    z = 2</div><div class=""> &gt;&gt;&gt;    def __init__(self, a, b):</div><div class="insert">+&gt;&gt;&gt;        self.x = a</div><div class="insert">+&gt;&gt;&gt;        self.y = b</div><div class=""> &gt;&gt;&gt;    def add(self):</div><div class=""> &gt;&gt;&gt;        return self.x + self.y + self.z</div><div class=""> &gt;&gt;&gt; myinstance = MyClass(3, 4)</div><div class=""> &gt;&gt;&gt; print myinstance.add()</div><div class=""> 9</div><div class=""> ``:code</div></div></div>
-    <div class="span6"><div class="diff"><div class=""> Here is a more complex class:</div><div class=""> ``</div><div class=""> &gt;&gt;&gt; class MyClass(object):</div><div class=""> &gt;&gt;&gt;    z = 2</div><div class=""> &gt;&gt;&gt;    def __init__(self, a, b):</div><div class="delete">-&gt;&gt;&gt;        self.x = a, self.y = b</div><div class=""> &gt;&gt;&gt;    def add(self):</div><div class=""> &gt;&gt;&gt;        return self.x + self.y + self.z</div><div class=""> &gt;&gt;&gt; myinstance = MyClass(3, 4)</div><div class=""> &gt;&gt;&gt; print myinstance.add()</div><div class=""> 9</div><div class=""> ``:code</div></div></div>
-</div>
-<hr />
+
 
 <ul><li><a href="https://github.com/mdipierro/web2py-book/commit/49f38ab7ef56de1eb4ef48f68427ebf8a46b505d">49f38ab</a><ul><li>Date : 2012-12-26</li><li>more small edits</li></ul></li></ul>
 <div class="row-fluid" id="com_49f38ab7ef56de1eb4ef48f68427ebf8a46b505d">
@@ -207,6 +211,18 @@
     <div class="span6"><div class="diff"><div class=""> Similarly, we can obtain a list of methods of the object &quot;1&quot; with the command ``dir``:</div><div class=""> ``</div><div class=""> &gt;&gt;&gt; dir(1)</div><div class="delete">-[&#x27;__abs__&#x27;, &#x27;__add__&#x27;, &#x27;__and__&#x27;, &#x27;__class__&#x27;, &#x27;__cmp__&#x27;, &#x27;__coerce__&#x27;,</div><div class="delete">-&#x27;__delattr__&#x27;, &#x27;__div__&#x27;, &#x27;__divmod__&#x27;, &#x27;__doc__&#x27;, &#x27;__float__&#x27;,</div><div class="delete">-&#x27;__floordiv__&#x27;, &#x27;__getattribute__&#x27;, &#x27;__getnewargs__&#x27;, &#x27;__hash__&#x27;, &#x27;__hex__&#x27;,</div><div class="delete">-&#x27;__index__&#x27;, &#x27;__init__&#x27;, &#x27;__int__&#x27;, &#x27;__invert__&#x27;, &#x27;__long__&#x27;, &#x27;__lshift__&#x27;,</div><div class="delete">-&#x27;__mod__&#x27;, &#x27;__mul__&#x27;, &#x27;__neg__&#x27;, &#x27;__new__&#x27;, &#x27;__nonzero__&#x27;, &#x27;__oct__&#x27;,</div><div class="delete">-&#x27;__or__&#x27;, &#x27;__pos__&#x27;, &#x27;__pow__&#x27;, &#x27;__radd__&#x27;, &#x27;__rand__&#x27;, &#x27;__rdiv__&#x27;,</div><div class="delete">-&#x27;__rdivmod__&#x27;, &#x27;__reduce__&#x27;, &#x27;__reduce_ex__&#x27;, &#x27;__repr__&#x27;, &#x27;__rfloordiv__&#x27;,</div><div class="delete">-&#x27;__rlshift__&#x27;, &#x27;__rmod__&#x27;, &#x27;__rmul__&#x27;, &#x27;__ror__&#x27;, &#x27;__rpow__&#x27;, &#x27;__rrshift__&#x27;,</div><div class="delete">-&#x27;__rshift__&#x27;, &#x27;__rsub__&#x27;, &#x27;__rtruediv__&#x27;, &#x27;__rxor__&#x27;, &#x27;__setattr__&#x27;,</div><div class="delete"><span class="highlight"></span>&#x27;__<span class="highlight"></span>s<span class="highlight">tr</span>__&#x27;, <span class="highlight">&#x27;__sub__&#x27;, &#x27;__truediv__&#x27;</span>, &#x27;__xor__&#x27;]</div><div class=""> ``:code</div></div></div>
 </div>
 <hr />
+
+
+
+<ul><li><a href="https://github.com/mdipierro/web2py-book/commit/e774cecf95a21db8eb69c1bd6c65dd532e8db300">e774cec</a><ul><li>Date : 2012-09-27</li><li>typo in chapter 2</li></ul></li></ul>
+<div class="row-fluid" id="com_e774cecf95a21db8eb69c1bd6c65dd532e8db300">
+    <div class="span6"><div class="diff"><div class=""> Here is a more complex class:</div><div class=""> ``</div><div class=""> &gt;&gt;&gt; class MyClass(object):</div><div class=""> &gt;&gt;&gt;    z = 2</div><div class=""> &gt;&gt;&gt;    def __init__(self, a, b):</div><div class="insert">+&gt;&gt;&gt;        self.x = a</div><div class="insert">+&gt;&gt;&gt;        self.y = b</div><div class=""> &gt;&gt;&gt;    def add(self):</div><div class=""> &gt;&gt;&gt;        return self.x + self.y + self.z</div><div class=""> &gt;&gt;&gt; myinstance = MyClass(3, 4)</div><div class=""> &gt;&gt;&gt; print myinstance.add()</div><div class=""> 9</div><div class=""> ``:code</div></div></div>
+    <div class="span6"><div class="diff"><div class=""> Here is a more complex class:</div><div class=""> ``</div><div class=""> &gt;&gt;&gt; class MyClass(object):</div><div class=""> &gt;&gt;&gt;    z = 2</div><div class=""> &gt;&gt;&gt;    def __init__(self, a, b):</div><div class="delete">-&gt;&gt;&gt;        self.x = a, self.y = b</div><div class=""> &gt;&gt;&gt;    def add(self):</div><div class=""> &gt;&gt;&gt;        return self.x + self.y + self.z</div><div class=""> &gt;&gt;&gt; myinstance = MyClass(3, 4)</div><div class=""> &gt;&gt;&gt; print myinstance.add()</div><div class=""> 9</div><div class=""> ``:code</div></div></div>
+</div>
+<hr />
+
+
+
 
 
         
