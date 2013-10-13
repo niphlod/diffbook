@@ -177,6 +177,10 @@
   <ul>
 
       
+      <li><a href="#com_5b6f32d64158ddb25a2b55b74a6198947b934f80">5b6f32d</a></li>
+      
+
+      
       <li><a href="#com_5f860e4094ac8ad56f13f4cdf731ebbce45bbe6c">5f860e4</a></li>
       
 
@@ -405,6 +409,15 @@
   </ul>
 </div>
 
+
+
+
+<ul><li><a href="https://github.com/mdipierro/web2py-book/commit/5b6f32d64158ddb25a2b55b74a6198947b934f80">5b6f32d</a><ul><li>Date : 2013-10-06</li><li>Referred to niphlod's slice re testing. Updated notes about using resonse.models_to_run to reflect the importance of the sort order of models</li></ul></li></ul>
+<div class="row-fluid" id="com_5b6f32d64158ddb25a2b55b74a6198947b934f80">
+    <div class="span6"><div class="diff"><div class=""> - ``response.delimiters`` defaults to ``(&#x27;{{&#x27;,&#x27;}}&#x27;)``. It allows you to change the delimiter of code embedded in views.</div><div class=""> - ``response.xmlrpc(request, methods)``: when a controller returns it, this function exposes the methods via XML-RPC``xmlrpc``:cite . This function is deprecated since a better mechanism is available and described in Chapter 10.</div><div class=""> - ``response.write(text)``: a method to write text into the output page body.</div><div class=""> - ``response.js`` can contain Javascript code. This code will be executed if and only if the response is received by a web2py component as discussed in Chapter 12.</div><div class=""> - ``response.models_to_run`` [[response_models_to_run]] contains a list of regexes that chooses what models to run.</div><div class=""> -- By default, this is set automatically to load /a/models/*.py, /a/models/c/*.py, and /a/models/c/f/*.py files when ``/a/c/f`` is requested. You can set, e.g., ``response.models_to_run = [&#x27;myfolder/&#x27;]`` to force the execution only of the models inside your application&#x27;s ``models/myfolder`` subfolder.</div><div class="insert">+-- NB: ``response.models_to_run`` is a list of regex, not a list of filepaths. The regex are relative to the models/ folder, so any model file with a relative file path that matches one of the regexes will be executed. Note also that this can not affect any models which have already been evaluated because they were earlier in the alphabetic sort order. That is, if a conditional model for controller orange was orange/orange_model.py and it set the regex to [.*], that change does not affect any models previously rejected for loading such as the model apple/apple_model.py ; it matches the new regex, but it was evaluated and rejected before orange/orange_model.py changed the regex.</div><div class="insert">+-- This means that if you want to use models_to_run to share conditional models between controllers, put the models in a sub-directory that will sort last such as zzz, and then use a regex &#x27;zzz&#x27;.</div><div class="insert">+. </div></div></div>
+    <div class="span6"><div class="diff"><div class=""> - ``response.delimiters`` defaults to ``(&#x27;{{&#x27;,&#x27;}}&#x27;)``. It allows you to change the delimiter of code embedded in views.</div><div class=""> - ``response.xmlrpc(request, methods)``: when a controller returns it, this function exposes the methods via XML-RPC``xmlrpc``:cite . This function is deprecated since a better mechanism is available and described in Chapter 10.</div><div class=""> - ``response.write(text)``: a method to write text into the output page body.</div><div class=""> - ``response.js`` can contain Javascript code. This code will be executed if and only if the response is received by a web2py component as discussed in Chapter 12.</div><div class=""> - ``response.models_to_run`` [[response_models_to_run]] contains a list of regexes that chooses what models to run.</div><div class=""> -- By default, this is set automatically to load /a/models/*.py, /a/models/c/*.py, and /a/models/c/f/*.py files when ``/a/c/f`` is requested. You can set, e.g., ``response.models_to_run = [&#x27;myfolder/&#x27;]`` to force the execution only of the models inside your application&#x27;s ``models/myfolder`` subfolder.</div></div></div>
+</div>
+<hr />
 
 
 
