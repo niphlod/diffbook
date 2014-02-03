@@ -177,6 +177,14 @@
   <ul>
 
       
+      <li><a href="#com_6b279066db843cdfca62c0f07c653faf61d702c9">6b27906</a></li>
+      
+
+      
+      <li><a href="#com_aaedb38690383ecf93b2532de0f390cd64ec2010">aaedb38</a></li>
+      
+
+      
       <li><a href="#com_744527ad9dc2857b9d9e98f20212fa303517bdd8">744527a</a></li>
       
 
@@ -213,6 +221,24 @@
   </ul>
 </div>
 
+
+
+
+<ul><li><a href="https://github.com/mdipierro/web2py-book/commit/6b279066db843cdfca62c0f07c653faf61d702c9">6b27906</a><ul><li>Date : 2014-01-22</li><li>field is hided even if checked on load and reload</li></ul></li></ul>
+<div class="row-fluid" id="com_6b279066db843cdfca62c0f07c653faf61d702c9">
+    <div class="span6"><div class="diff"><div class=""> and the following &quot;default/index.html&quot; view:</div><div class=""> ``</div><div class=""> {{extend &#x27;layout.html&#x27;}}</div><div class=""> {{=form}}</div><div class=""> &lt;script&gt;</div><div class=""> jQuery(document).ready(function(){</div><div class="insert">+   if(jQuery(&#x27;#taxpayer_married&#x27;).prop(&#x27;checked&#x27;))</div><div class="insert">+        jQuery(&#x27;#taxpayer_spouse_name__row&#x27;).show();</div><div class="insert">+   else jQuery(&#x27;#taxpayer_spouse_name__row&#x27;).hide();</div><div class="">    jQuery(&#x27;#taxpayer_married&#x27;).change(function(){</div><div class="">         if(jQuery(&#x27;#taxpayer_married&#x27;).prop(&#x27;checked&#x27;))</div><div class="">             jQuery(&#x27;#taxpayer_spouse_name__row&#x27;).show();</div><div class="">         else jQuery(&#x27;#taxpayer_spouse_name__row&#x27;).hide();});</div><div class=""> });</div><div class=""> &lt;/script&gt;</div><div class=""> ``:code</div></div></div>
+    <div class="span6"><div class="diff"><div class=""> and the following &quot;default/index.html&quot; view:</div><div class=""> ``</div><div class=""> {{extend &#x27;layout.html&#x27;}}</div><div class=""> {{=form}}</div><div class=""> &lt;script&gt;</div><div class=""> jQuery(document).ready(function(){</div><div class="delete">-   jQuery(&#x27;#taxpayer_spouse_name__row&#x27;).hide();</div><div class="">    jQuery(&#x27;#taxpayer_married&#x27;).change(function(){</div><div class="">         if(jQuery(&#x27;#taxpayer_married&#x27;).prop(&#x27;checked&#x27;))</div><div class="">             jQuery(&#x27;#taxpayer_spouse_name__row&#x27;).show();</div><div class="">         else jQuery(&#x27;#taxpayer_spouse_name__row&#x27;).hide();});</div><div class=""> });</div><div class=""> &lt;/script&gt;</div><div class=""> ``:code</div></div></div>
+</div>
+<hr />
+
+
+
+<ul><li><a href="https://github.com/mdipierro/web2py-book/commit/aaedb38690383ecf93b2532de0f390cd64ec2010">aaedb38</a><ul><li>Date : 2013-11-01</li><li>fixed reference to superfish and import Crud</li></ul></li></ul>
+<div class="row-fluid" id="com_aaedb38690383ecf93b2532de0f390cd64ec2010">
+    <div class="span6"><div class="diff"><div class="insert">While web2py is mainly for server-side development, the **welcome** scaffolding app comes with the base jQuery library``jquery``:cite, jQuery calendars (date picker, datetime picker and clock), <span class="highlight">and some additional JavaScript functions based on jQuery</span>.<span class="highlight"></span></div></div></div>
+    <div class="span6"><div class="diff"><div class="delete">While web2py is mainly for server-side development, the **welcome** scaffolding app comes with the base jQuery library``jquery``:cite, jQuery calendars (date picker, datetime picker and clock), <span class="highlight">the &quot;superfish</span>.<span class="highlight">js&quot; menu, and some additional JavaScript functions based on jQuery.</span></div></div></div>
+</div>
+<hr />
 
 
 
@@ -298,7 +324,7 @@
 
     <div id="footer">
       <div class="container-fluid">
-          <div class="copyright pull-left">Copyright &#169; 2013</div>
+          <div class="copyright pull-left">Copyright &#169; 2014</div>
           <div id="poweredBy" class="pull-right">
               Powered by
               <a href="http://www.web2py.com/">web2py</a>
