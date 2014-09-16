@@ -47,12 +47,10 @@
     var w2p_ajax_date_format = "%Y-%m-%d";
     var w2p_ajax_datetime_format = "%Y-%m-%d %H:%M:%S";
     //--></script>
+
 <meta name="keywords" content="web2py, python, framework" />
-
 <meta name="description" content="a cool new app" />
-
 <meta name="generator" content="Web2py Web Framework" />
-
 <meta name="author" content="Your Name &lt;you@example.com&gt;" />
 <script src="static/js/jquery.js" type="text/javascript"></script><link href="static/css/calendar.css" rel="stylesheet" type="text/css" /><script src="static/js/calendar.js" type="text/javascript"></script><script src="static/js/web2py.js" type="text/javascript"></script><link href="static/css/web2py.css" rel="stylesheet" type="text/css" /><link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="static/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" /><link href="static/css/web2py_bootstrap.css" rel="stylesheet" type="text/css" />
 
@@ -177,6 +175,14 @@
   <ul>
 
       
+      <li><a href="#com_a00ce42e82baceef9da85e69f2df2998e7c6a8a5">a00ce42</a></li>
+      
+
+      
+      <li><a href="#com_1984ff40c73c6da17ff268090c8526e3375314b5">1984ff4</a></li>
+      
+
+      
       <li><a href="#com_d845dc50f2d279b1f92294aede30839bc9dfb8d3">d845dc5</a></li>
       
 
@@ -255,6 +261,24 @@
   </ul>
 </div>
 
+
+
+
+<ul><li><a href="https://github.com/mdipierro/web2py-book/commit/a00ce42e82baceef9da85e69f2df2998e7c6a8a5">a00ce42</a><ul><li>Date : 2014-03-25</li><li>removed reference to -N option</li></ul></li></ul>
+<div class="row-fluid" id="com_a00ce42e82baceef9da85e69f2df2998e7c6a8a5">
+    <div class="span6"><div class="diff"><div class=""> Finally, as described in Chapter 4, we need to run the mail_queue.py script as if it were inside a controller in our app:</div><div class=""> ``</div><div class="insert">python web2py.py -S app -M<span class="highlight"></span> -R applications/app/private/mail_queue.py</div><div class=""> ``:code</div><div class=""> </div><div class="insert">where ``-S app`` tells web2py to run &quot;mail_queue.py&quot; as &quot;app&quot;, ``-M`` tells web2py to execute models<span class="highlight"></span>.</div></div></div>
+    <div class="span6"><div class="diff"><div class=""> Finally, as described in Chapter 4, we need to run the mail_queue.py script as if it were inside a controller in our app:</div><div class=""> ``</div><div class="delete">python web2py.py -S app -M<span class="highlight"> -N</span> -R applications/app/private/mail_queue.py</div><div class=""> ``:code</div><div class=""> </div><div class="delete">where ``-S app`` tells web2py to run &quot;mail_queue.py&quot; as &quot;app&quot;, ``-M`` tells web2py to execute models<span class="highlight">, and ``-N`` tells web2py not to run cron</span>.</div></div></div>
+</div>
+<hr />
+
+
+
+<ul><li><a href="https://github.com/mdipierro/web2py-book/commit/1984ff40c73c6da17ff268090c8526e3375314b5">1984ff4</a><ul><li>Date : 2014-02-11</li><li>Some typos and some proposals chapter 06 - 14.</li></ul></li></ul>
+<div class="row-fluid" id="com_1984ff40c73c6da17ff268090c8526e3375314b5">
+    <div class="span6"><div class="diff"><div class=""> ``</div><div class="insert">+send(self, to, subject=&#x27;None&#x27;, message=&#x27;None&#x27;, attachments=[],</div><div class="insert">+     cc=[], bcc=[], reply_to=[], sender=None, encoding=&#x27;utf-8&#x27;,</div><div class="insert">+     raw=True, headers={})</div><div class=""> ``:code</div><div class=""> </div><div class=""> Note, ``to``, ``cc``, and ``bcc`` each take a list of email addresses.</div><div class=""> </div><div class="insert">+``sender`` defaults to ``None`` and in this case the sender will be set to ``mail.settings.sender``.</div><div class="insert">+</div><div class=""> ``headers`` is dictionary of headers to refine the headers just before sending the email. For example:</div><div class=""> </div><div class=""> ``</div><div class=""> headers = {&#x27;Return-Path&#x27; : &#x27;bounces@example.org&#x27;}</div><div class=""> ``:code</div><div class=""> </div><div class=""> Following are some additional examples demonstrating the use of ``mail.send()``.</div></div></div>
+    <div class="span6"><div class="diff"><div class=""> ``</div><div class="delete">-send(self, to, subject=&#x27;None&#x27;, message=&#x27;None&#x27;, attachments=1,</div><div class="delete">-     cc=1, bcc=1, reply_to=1, encoding=&#x27;utf-8&#x27;,headers={},</div><div class="delete">-     sender=None)</div><div class=""> ``:code</div><div class=""> </div><div class=""> Note, ``to``, ``cc``, and ``bcc`` each take a list of email addresses.</div><div class=""> </div><div class=""> ``headers`` is dictionary of headers to refine the headers just before sending the email. For example:</div><div class=""> </div><div class=""> ``</div><div class=""> headers = {&#x27;Return-Path&#x27; : &#x27;bounces@example.org&#x27;}</div><div class=""> ``:code</div><div class=""> </div><div class="delete">-``sender`` defaults to ``None`` and in this case the sender will be set to ``mail.settings.sender``.</div><div class="delete">-</div><div class=""> Following are some additional examples demonstrating the use of ``mail.send()``.</div></div></div>
+</div>
+<hr />
 
 
 
